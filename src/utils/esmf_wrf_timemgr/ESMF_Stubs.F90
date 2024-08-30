@@ -98,10 +98,10 @@ CONTAINS
 ! NOOP
    SUBROUTINE ESMF_Finalize( rc )
       USE ESMF_BaseMod
-      INTEGER, INTENT(  OUT), OPTIONAL :: rc
 #ifndef HIDE_MPI
-#include <mpif.h>
+      use mpi
 #endif
+      INTEGER, INTENT(  OUT), OPTIONAL :: rc
       INTEGER :: ier
 
       IF ( PRESENT( rc ) ) rc = ESMF_SUCCESS

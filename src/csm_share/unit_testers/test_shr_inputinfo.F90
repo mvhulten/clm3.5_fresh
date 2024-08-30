@@ -15,6 +15,7 @@ program test_shr_inputinfo
   use shr_ncio_mod, only: shr_ncio_setDebug
   use shr_sys_mod,  only: shr_sys_abort
   use shr_mpi_mod,  only: shr_mpi_init, shr_mpi_finalize, shr_mpi_commrank
+  use mpi
 
   implicit none
   type(shr_inputInfo_initType) :: CCSMInit
@@ -37,7 +38,6 @@ program test_shr_inputinfo
                                 archive_dir2, restart_pfile2, mode, start_type2
   character(len=SHR_KIND_CS) :: logFilePostFix2, outPathRoot2
   logical :: atm_adiabatic, atm_ideal_phys, aqua_planet, exists, brnch_retain_casename
-#include <mpif.h>
 
   call shr_mpi_init( )
   mpicom = MPI_COMM_WORLD

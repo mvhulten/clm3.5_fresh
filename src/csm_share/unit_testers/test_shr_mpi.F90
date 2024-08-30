@@ -10,8 +10,8 @@ module test_shr_mpi_mod
                           shr_mpi_barrier
   use shr_kind_mod, only: r8 => SHR_KIND_R8
   use shr_sys_mod,  only: shr_sys_abort
+  use mpi
   implicit none
-#include <mpif.h>
 
   private
 

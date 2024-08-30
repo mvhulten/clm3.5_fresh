@@ -10,6 +10,7 @@ Module shr_mpi_mod
 !-------------------------------------------------------------------------------
 
    use shr_kind_mod
+   use mpi
 
    implicit none
    private
@@ -88,8 +89,6 @@ Module shr_mpi_mod
      shr_mpi_maxr0, &
      shr_mpi_maxr1
    end interface
-
-#include <mpif.h>         ! mpi library include file
 
 !===============================================================================
 CONTAINS

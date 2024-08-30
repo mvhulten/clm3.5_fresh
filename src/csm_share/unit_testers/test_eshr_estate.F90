@@ -1202,6 +1202,7 @@ program test_eshr_estate
   use ESMF_Mod
   use shr_mpi_mod,             only: shr_mpi_init, shr_mpi_commrank, shr_mpi_finalize, &
                                      shr_mpi_barrier
+  use mpi
   implicit none
   type(shr_inputinfo_initType) :: CCSMInit
   type(eshr_timemgr_clockInfoType) :: ClockInfo
@@ -1526,8 +1527,6 @@ program test_eshr_estate
   type(ESMF_State)     :: eStateIce, eStateLnd, eStateOcn, eStateXao
   type(ESMF_State)     :: eStateOut    ! ESMF State output state for copy or redist
   type(ESMF_State)     :: eStateExpect ! What expect merge state to look like
-
-#include <mpif.h>
 
 
   call shr_mpi_init( )

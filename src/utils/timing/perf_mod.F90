@@ -16,6 +16,7 @@ module perf_mod
 !-----------------------------------------------------------------------
    use shr_sys_mod,       only: shr_sys_abort
    use shr_kind_mod,      only: shr_kind_cl, shr_kind_r8
+   use mpi
 
 !-----------------------------------------------------------------------
 !- module boilerplate --------------------------------------------------
@@ -53,7 +54,6 @@ module perf_mod
 #ifdef HAVE_PAPI
 #include <f77papi.h>
 #endif
-#include <mpif.h>  
 #include "gptl.inc"
 
 !-----------------------------------------------------------------------

@@ -900,8 +900,7 @@ subroutine cpl_map_npFixNew3(buni,buno,fld1,fld2)
 
    use cpl_const_mod
    use shr_timer_mod       ! share timer routines
-
-#include <mpif.h>         ! mpi library include file
+   use mpi
 
 ! !INPUT/OUTPUT PARAMETERS:
 
@@ -1193,8 +1192,7 @@ subroutine cpl_map_npFixNew3R(buni,buno,fld1,fld2)
 
    use cpl_const_mod
    use shr_timer_mod       ! share timer routines
-
-#include <mpif.h>         ! mpi library include file
+   use mpi
 
 ! !INPUT/OUTPUT PARAMETERS:
 

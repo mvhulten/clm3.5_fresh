@@ -48,6 +48,7 @@ use shr_const_mod,      only: SHR_CONST_PI
 use shr_sys_mod,        only: shr_sys_abort, shr_sys_system
 use shr_orb_mod,        only: SHR_ORB_UNDEF_INT, SHR_ORB_UNDEF_REAL
 use shr_mpi_mod,        only: shr_mpi_init, shr_mpi_commrank, shr_mpi_finalize
+use mpi
 
 implicit none
 
@@ -144,7 +145,6 @@ integer :: restart_n, restart_n2, restart_n3
 character(len=256) :: restart_option, restart_option2, restart_option3
 character(len=*), parameter :: F00 = &
 "('Advance clock: current date: ', i2.2, '/', i2.2, '/', i4.4, ' : ', i6.6, ' (Sec) CalDay:', f17.12 )"
-#include <mpif.h>
 
   call shr_mpi_init( )
   MPICom = MPI_COMM_WORLD

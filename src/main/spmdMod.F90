@@ -18,6 +18,7 @@ module spmdMod
 !-----------------------------------------------------------------------
 
   use shr_kind_mod, only: r8 => shr_kind_r8
+  use mpi
   implicit none
   save
   private
@@ -49,8 +50,6 @@ module spmdMod
   public :: MPI_CHARACTER
   public :: MPI_COMM_WORLD
   public :: MPI_MAX_PROCESSOR_NAME
-
-#include <mpif.h>  
 
 contains
 
